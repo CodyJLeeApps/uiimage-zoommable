@@ -7,13 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		71DE93361F8E5FF90028135A /* TestImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71DE93351F8E5FF90028135A /* TestImage.swift */; };
+		71DE93391F8E60E50028135A /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71DE93381F8E60E50028135A /* DataService.swift */; };
 		71E6C2621F8D34FD0031AECF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71E6C2611F8D34FD0031AECF /* AppDelegate.swift */; };
-		71E6C2641F8D34FD0031AECF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71E6C2631F8D34FD0031AECF /* ViewController.swift */; };
+		71E6C2641F8D34FD0031AECF /* ZoomImageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71E6C2631F8D34FD0031AECF /* ZoomImageVC.swift */; };
 		71E6C2671F8D34FD0031AECF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71E6C2651F8D34FD0031AECF /* Main.storyboard */; };
 		71E6C2691F8D34FD0031AECF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 71E6C2681F8D34FD0031AECF /* Assets.xcassets */; };
 		71E6C26C1F8D34FD0031AECF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71E6C26A1F8D34FD0031AECF /* LaunchScreen.storyboard */; };
 		71E6C2771F8D34FE0031AECF /* uiimage_zoomableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71E6C2761F8D34FE0031AECF /* uiimage_zoomableTests.swift */; };
 		71E6C2821F8D34FE0031AECF /* uiimage_zoomableUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71E6C2811F8D34FE0031AECF /* uiimage_zoomableUITests.swift */; };
+		71E6C2931F8D39460031AECF /* ZoomImageScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71E6C2921F8D39460031AECF /* ZoomImageScrollView.swift */; };
+		71E6C2971F8E57E00031AECF /* TestImageLibraryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71E6C2961F8E57E00031AECF /* TestImageLibraryCollectionViewCell.swift */; };
+		71E6C2991F8E5B530031AECF /* ImageCollectionViewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71E6C2981F8E5B530031AECF /* ImageCollectionViewVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,9 +39,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		71DE93351F8E5FF90028135A /* TestImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestImage.swift; sourceTree = "<group>"; };
+		71DE93381F8E60E50028135A /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 		71E6C25E1F8D34FD0031AECF /* uiimage-zoomable.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "uiimage-zoomable.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		71E6C2611F8D34FD0031AECF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		71E6C2631F8D34FD0031AECF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		71E6C2631F8D34FD0031AECF /* ZoomImageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZoomImageVC.swift; sourceTree = "<group>"; };
 		71E6C2661F8D34FD0031AECF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		71E6C2681F8D34FD0031AECF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		71E6C26B1F8D34FD0031AECF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +54,9 @@
 		71E6C27D1F8D34FE0031AECF /* uiimage-zoomableUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "uiimage-zoomableUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		71E6C2811F8D34FE0031AECF /* uiimage_zoomableUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = uiimage_zoomableUITests.swift; sourceTree = "<group>"; };
 		71E6C2831F8D34FE0031AECF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		71E6C2921F8D39460031AECF /* ZoomImageScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZoomImageScrollView.swift; sourceTree = "<group>"; };
+		71E6C2961F8E57E00031AECF /* TestImageLibraryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestImageLibraryCollectionViewCell.swift; sourceTree = "<group>"; };
+		71E6C2981F8E5B530031AECF /* ImageCollectionViewVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCollectionViewVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +84,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		71DE93371F8E60D10028135A /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				71DE93381F8E60E50028135A /* DataService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 		71E6C2551F8D34FD0031AECF = {
 			isa = PBXGroup;
 			children = (
@@ -97,8 +115,11 @@
 		71E6C2601F8D34FD0031AECF /* uiimage-zoomable */ = {
 			isa = PBXGroup;
 			children = (
+				71DE93371F8E60D10028135A /* Services */,
+				71E6C2911F8D35120031AECF /* Model */,
+				71E6C2901F8D35100031AECF /* View */,
+				71E6C28F1F8D350B0031AECF /* Controller */,
 				71E6C2611F8D34FD0031AECF /* AppDelegate.swift */,
-				71E6C2631F8D34FD0031AECF /* ViewController.swift */,
 				71E6C2651F8D34FD0031AECF /* Main.storyboard */,
 				71E6C2681F8D34FD0031AECF /* Assets.xcassets */,
 				71E6C26A1F8D34FD0031AECF /* LaunchScreen.storyboard */,
@@ -123,6 +144,32 @@
 				71E6C2831F8D34FE0031AECF /* Info.plist */,
 			);
 			path = "uiimage-zoomableUITests";
+			sourceTree = "<group>";
+		};
+		71E6C28F1F8D350B0031AECF /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				71E6C2981F8E5B530031AECF /* ImageCollectionViewVC.swift */,
+				71E6C2631F8D34FD0031AECF /* ZoomImageVC.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		71E6C2901F8D35100031AECF /* View */ = {
+			isa = PBXGroup;
+			children = (
+				71E6C2921F8D39460031AECF /* ZoomImageScrollView.swift */,
+				71E6C2961F8E57E00031AECF /* TestImageLibraryCollectionViewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		71E6C2911F8D35120031AECF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				71DE93351F8E5FF90028135A /* TestImage.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,8 +306,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				71E6C2641F8D34FD0031AECF /* ViewController.swift in Sources */,
+				71E6C2641F8D34FD0031AECF /* ZoomImageVC.swift in Sources */,
+				71DE93391F8E60E50028135A /* DataService.swift in Sources */,
+				71DE93361F8E5FF90028135A /* TestImage.swift in Sources */,
 				71E6C2621F8D34FD0031AECF /* AppDelegate.swift in Sources */,
+				71E6C2991F8E5B530031AECF /* ImageCollectionViewVC.swift in Sources */,
+				71E6C2971F8E57E00031AECF /* TestImageLibraryCollectionViewCell.swift in Sources */,
+				71E6C2931F8D39460031AECF /* ZoomImageScrollView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

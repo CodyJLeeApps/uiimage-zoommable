@@ -1,24 +1,145 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="j51-sy-EdC">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Zoom ImageVC-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ZoomImageVC" customModule="uiimage_zoomable" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3v5-4o-iC9" customClass="ZoomImageScrollView" customModule="uiimage_zoomable" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mountain" translatesAutoresizingMaskIntoConstraints="NO" id="iLV-4X-pUS">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="iLV-4X-pUS" secondAttribute="trailing" id="Esm-rT-k4z"/>
+                                    <constraint firstItem="iLV-4X-pUS" firstAttribute="centerX" secondItem="3v5-4o-iC9" secondAttribute="centerX" id="HCh-do-rDv"/>
+                                    <constraint firstItem="iLV-4X-pUS" firstAttribute="centerY" secondItem="3v5-4o-iC9" secondAttribute="centerY" id="N9R-oF-oaB"/>
+                                    <constraint firstItem="iLV-4X-pUS" firstAttribute="leading" secondItem="3v5-4o-iC9" secondAttribute="leading" id="Rb8-SE-jvo"/>
+                                    <constraint firstAttribute="bottom" secondItem="iLV-4X-pUS" secondAttribute="bottom" id="Xi2-ou-o7Y"/>
+                                    <constraint firstItem="iLV-4X-pUS" firstAttribute="top" secondItem="3v5-4o-iC9" secondAttribute="top" id="xFY-fs-XMW"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="3v5-4o-iC9" secondAttribute="bottom" id="KEF-yg-MnQ"/>
+                            <constraint firstItem="3v5-4o-iC9" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="VKL-st-tJv"/>
+                            <constraint firstItem="3v5-4o-iC9" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="VNC-qU-vLk"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="3v5-4o-iC9" secondAttribute="trailing" id="pPg-OZ-yJF"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="scrollView" destination="3v5-4o-iC9" id="xZe-YB-qpn"/>
+                        <outlet property="zoomUIImage" destination="iLV-4X-pUS" id="xa9-Xd-FHc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="876" y="784"/>
+        </scene>
+        <!--Test Image Library-->
+        <scene sceneID="kIg-eu-JvQ">
+            <objects>
+                <viewController id="4CW-fD-XcU" customClass="ImageCollectionViewVC" customModule="uiimage_zoomable" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="aeI-25-5ii">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="JId-8c-SIb">
+                                <rect key="frame" x="30" y="84" width="315" height="563"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Ub4-u2-m5y">
+                                    <size key="itemSize" width="170" height="170"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ImageLibraryCell" id="VMC-pO-EVG" customClass="TestImageLibraryCollectionViewCell" customModule="uiimage_zoomable" customModuleProvider="target">
+                                        <rect key="frame" x="72.5" y="0.0" width="170" height="170"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="170" height="170"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="prairie" translatesAutoresizingMaskIntoConstraints="NO" id="Lo7-FU-ZcX">
+                                                    <rect key="frame" x="0.0" y="0.0" width="170" height="170"/>
+                                                </imageView>
+                                            </subviews>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstItem="Lo7-FU-ZcX" firstAttribute="top" secondItem="VMC-pO-EVG" secondAttribute="top" id="3qq-d8-imr"/>
+                                            <constraint firstAttribute="trailing" secondItem="Lo7-FU-ZcX" secondAttribute="trailing" id="5EB-XX-I9V"/>
+                                            <constraint firstAttribute="bottom" secondItem="Lo7-FU-ZcX" secondAttribute="bottom" id="EGG-SC-Kfs"/>
+                                            <constraint firstItem="Lo7-FU-ZcX" firstAttribute="leading" secondItem="VMC-pO-EVG" secondAttribute="leading" id="Lat-Zb-rvv"/>
+                                        </constraints>
+                                        <size key="customSize" width="170" height="170"/>
+                                        <connections>
+                                            <outlet property="imageView" destination="Lo7-FU-ZcX" id="dHL-nE-dUw"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="9Sz-5Z-uGx" firstAttribute="bottom" secondItem="JId-8c-SIb" secondAttribute="bottom" constant="20" id="MaS-e0-zKK"/>
+                            <constraint firstItem="9Sz-5Z-uGx" firstAttribute="trailing" secondItem="JId-8c-SIb" secondAttribute="trailing" constant="30" id="kM7-FP-oNg"/>
+                            <constraint firstItem="JId-8c-SIb" firstAttribute="top" secondItem="9Sz-5Z-uGx" secondAttribute="top" constant="20" id="m7f-gC-k1O"/>
+                            <constraint firstItem="JId-8c-SIb" firstAttribute="leading" secondItem="9Sz-5Z-uGx" secondAttribute="leading" constant="30" id="uE3-gE-CJa"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="9Sz-5Z-uGx"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Test Image Library" id="e00-Vx-Bit"/>
+                    <connections>
+                        <outlet property="testImageCollectionView" destination="JId-8c-SIb" id="LyI-LT-gwI"/>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="ZoomImageVC" id="EN9-Xi-KmE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bN1-QM-6Qz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="135.19999999999999" y="783.05847076461771"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="G5y-2H-pmR">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="j51-sy-EdC" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="HUS-UU-jP9">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="4CW-fD-XcU" kind="relationship" relationship="rootViewController" id="0pE-bL-Aot"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5dW-wV-2FY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-607" y="784"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="mountain" width="4733" height="2958"/>
+        <image name="prairie" width="5184" height="2916"/>
+    </resources>
 </document>
