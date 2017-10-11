@@ -63,7 +63,19 @@ class ImageCollectionViewVC: UIViewController, UICollectionViewDataSource, UICol
         let testImage = images[indexPath.row]
         selectedImage = UIImage(named: testImage.image)!
         performSegue(withIdentifier: "ZoomImageVC", sender: self)
+        
     }
     
     
 }
+
+/*
+extension ImageCollectionViewVC : UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        var itemsPerRow = 1
+        let deviceName = utsname().machine
+        
+        return CGSize(width: 5, height: 5)
+    }
+}
+*/
