@@ -25,14 +25,11 @@ class ZoomImageVC: UIViewController, UIScrollViewDelegate {
         scrollView.contentSize = CGSize(width: view.frame.width, height: view.frame.height)
         scrollView.delegate = self
         
-        //zoomUIImage.image = passedImage
+        zoomUIImage.image = passedImage
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        // attemp to download image, otherwise show the image that was passed in.
-        imageURL = URL(string: "https://raw.githubusercontent.com/onevcat/Kingfisher/master/images/logo.png")
-        zoomUIImage.kf.indicatorType = .activity
-        zoomUIImage.kf.setImage(with: imageURL)
+        super.viewWillAppear(true)
     }
 
     override func didReceiveMemoryWarning() {
@@ -52,16 +49,3 @@ class ZoomImageVC: UIViewController, UIScrollViewDelegate {
         }
 }
 
-
-/*
- MTAPIClient.downloadData(url: imageURL) { data, response, error in
- if let error = error {
- completion(nil, error)
- 
- } else if let data = data, let image = UIImage(data: data) {
- imageCache.setObject(image, forKey: url.absoluteString as NSString)
- completion(image, nil)
- } else {
- completion(nil, NSError.generalParsingError(domain: url.absoluteString))
- }
- */
