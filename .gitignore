@@ -1,3 +1,6 @@
 *.DS_STORE
 .DS_STORE
 */xcuserdata/*
+xcuserdata
+build/
+Podfile.lock

@@ -1,0 +1,6 @@
+framework module Pods_uiimage_zoomable {
+  umbrella header "Pods-uiimage-zoomable-umbrella.h"
+
+  export *
+  module * { export * }
+}

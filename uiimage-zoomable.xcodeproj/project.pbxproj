@@ -19,6 +19,7 @@
 		71E6C2931F8D39460031AECF /* ZoomImageScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71E6C2921F8D39460031AECF /* ZoomImageScrollView.swift */; };
 		71E6C2971F8E57E00031AECF /* TestImageLibraryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71E6C2961F8E57E00031AECF /* TestImageLibraryCollectionViewCell.swift */; };
 		71E6C2991F8E5B530031AECF /* ImageCollectionViewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71E6C2981F8E5B530031AECF /* ImageCollectionViewVC.swift */; };
+		BF97694C4581DEC3B530E675 /* Pods_uiimage_zoomable.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BB78932F54D37B2BC6DBB1D /* Pods_uiimage_zoomable.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,6 +40,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1BB78932F54D37B2BC6DBB1D /* Pods_uiimage_zoomable.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_uiimage_zoomable.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		71DE93351F8E5FF90028135A /* TestImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestImage.swift; sourceTree = "<group>"; };
 		71DE93381F8E60E50028135A /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 		71E6C25E1F8D34FD0031AECF /* uiimage-zoomable.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "uiimage-zoomable.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -57,6 +59,8 @@
 		71E6C2921F8D39460031AECF /* ZoomImageScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZoomImageScrollView.swift; sourceTree = "<group>"; };
 		71E6C2961F8E57E00031AECF /* TestImageLibraryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestImageLibraryCollectionViewCell.swift; sourceTree = "<group>"; };
 		71E6C2981F8E5B530031AECF /* ImageCollectionViewVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCollectionViewVC.swift; sourceTree = "<group>"; };
+		78B2CCC2270F5FC7137C1DC5 /* Pods-uiimage-zoomable.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-uiimage-zoomable.debug.xcconfig"; path = "Pods/Target Support Files/Pods-uiimage-zoomable/Pods-uiimage-zoomable.debug.xcconfig"; sourceTree = "<group>"; };
+		78DA0C2816692716ADA865F1 /* Pods-uiimage-zoomable.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-uiimage-zoomable.release.xcconfig"; path = "Pods/Target Support Files/Pods-uiimage-zoomable/Pods-uiimage-zoomable.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +68,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF97694C4581DEC3B530E675 /* Pods_uiimage_zoomable.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -84,6 +89,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		12FA3B8101F4516608665E3A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				78B2CCC2270F5FC7137C1DC5 /* Pods-uiimage-zoomable.debug.xcconfig */,
+				78DA0C2816692716ADA865F1 /* Pods-uiimage-zoomable.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		6418065250760B91226E1B33 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1BB78932F54D37B2BC6DBB1D /* Pods_uiimage_zoomable.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		71DE93371F8E60D10028135A /* Services */ = {
 			isa = PBXGroup;
 			children = (
@@ -99,6 +121,8 @@
 				71E6C2751F8D34FE0031AECF /* uiimage-zoomableTests */,
 				71E6C2801F8D34FE0031AECF /* uiimage-zoomableUITests */,
 				71E6C25F1F8D34FD0031AECF /* Products */,
+				12FA3B8101F4516608665E3A /* Pods */,
+				6418065250760B91226E1B33 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -179,9 +203,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 71E6C2861F8D34FE0031AECF /* Build configuration list for PBXNativeTarget "uiimage-zoomable" */;
 			buildPhases = (
+				2861425275C41A858E0B288A /* [CP] Check Pods Manifest.lock */,
 				71E6C25A1F8D34FD0031AECF /* Sources */,
 				71E6C25B1F8D34FD0031AECF /* Frameworks */,
 				71E6C25C1F8D34FD0031AECF /* Resources */,
+				025AB2931D084333BB4A2D24 /* [CP] Embed Pods Frameworks */,
+				921CEDCA234000B582D572A4 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -300,6 +327,62 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		025AB2931D084333BB4A2D24 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-uiimage-zoomable/Pods-uiimage-zoomable-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/FLAnimatedImage/FLAnimatedImage.framework",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FLAnimatedImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-uiimage-zoomable/Pods-uiimage-zoomable-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2861425275C41A858E0B288A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-uiimage-zoomable-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		921CEDCA234000B582D572A4 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-uiimage-zoomable/Pods-uiimage-zoomable-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		71E6C25A1F8D34FD0031AECF /* Sources */ = {
@@ -476,6 +559,7 @@
 		};
 		71E6C2871F8D34FE0031AECF /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 78B2CCC2270F5FC7137C1DC5 /* Pods-uiimage-zoomable.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -491,6 +575,7 @@
 		};
 		71E6C2881F8D34FE0031AECF /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 78DA0C2816692716ADA865F1 /* Pods-uiimage-zoomable.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
